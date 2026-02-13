@@ -1,6 +1,6 @@
 # 🏫 Salas Vacías FIC UDP
 
-Aplicación web que permite a los estudiantes de la **Universidad Diego Portales** encontrar salas de clase vacías en la Facltad de Ingenieria y Ciencias en tiempo real.
+Aplicación web que permite a los estudiantes de la **Universidad Diego Portales** encontrar salas de clase vacías en la Facultad de Ingenieria y Ciencias en tiempo real.
 
 🌐 **Demo en vivo:** [https://salas-vacias.vercel.app](https://salas-vacias.vercel.app)
 
