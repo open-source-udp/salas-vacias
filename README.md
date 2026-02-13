@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏫 Salas Vacías FIC UDP
 
-## Getting Started
+Aplicación web que permite a los estudiantes de la **Universidad Diego Portales** encontrar salas de clase vacías en la Facultad de Ingenieria y Ciencias en tiempo real.
 
-First, run the development server:
+🌐 **Demo en vivo:** [https://salas-vacias.vercel.app](https://salas-vacias.vercel.app)
+
+## 📋 ¿Qué hace?
+
+La aplicación muestra las salas disponibles (vacías) en dos edificios de la universidad:
+
+- 🏢 **Edificio Ejército** (E441)
+- 🏢 **Edificio Vergara** (V432)
+
+### Características
+
+- ✅ Consulta en tiempo real de salas vacías
+- ✅ Filtrado automático por bloque horario actual
+- ✅ Vista detallada por piso de cada edificio
+- ✅ Interfaz intuitiva con Material UI
+
+## 🚀 Instalación
 
 ```bash
+# Clonar el repositorio
+git clone https://github.com/open-source-udp/salas-vacias.git
+
+# Entrar al directorio
+cd salas-vacias
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tecnologías
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Tecnología | Uso |
+|------------|-----|
+| [Next.js 14](https://nextjs.org/) | Framework de React |
+| [TypeScript](https://www.typescriptlang.org/) | Tipado estático |
+| [Material UI](https://mui.com/) | Componentes de interfaz |
+| [Axios](https://axios-http.com/) | Peticiones HTTP |
+| [Vercel](https://vercel.com/) | Hosting y deployment |
 
-## Learn More
+## 📁 Estructura del proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+├── page.tsx          # Página principal
+├── axios/
+│   └── getSalas.ts   # Obtención de datos de salas
+├── card/
+│   └── BuildingCard.tsx   # Tarjeta de edificio
+├── modal/
+│   └── BuildingModal.tsx  # Modal con detalle de salas
+├── types/
+│   └── Building.ts   # Tipos TypeScript
+└── utils/
+    ├── filters.ts    # Lógica de filtrado de salas
+    └── time.js       # Utilidades de tiempo/bloques
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔄 ¿Cómo funciona?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Obtiene los horarios** de todas las clases desde una fuente de datos externa
+2. **Filtra por edificio** (Ejército o Vergara)
+3. **Determina el bloque horario actual** según la hora del día
+4. **Calcula las salas vacías** comparando las ocupadas vs todas las disponibles
+5. **Muestra el resultado** en tarjetas interactivas
 
-## Deploy on Vercel
+## 🤝 Contribuir
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+¡Las contribuciones son bienvenidas! Si quieres mejorar el proyecto:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Haz fork del repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Haz commit de tus cambios (`git commit -m 'Agregar nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto es open source y está disponible para la comunidad UDP.
+
+---
+
+Hecho con ❤️ por [Open Source UDP](https://github.com/open-source-udp)
