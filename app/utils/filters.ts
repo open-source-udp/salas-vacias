@@ -43,7 +43,7 @@ export const filterByBuilding = (
 };
 
 export const filterByDay = (day: number, rooms: SalaNode[]): SalaNode[] => {
-  const filteredRooms = rooms.filter((room) => room.day === String(day));
+  const filteredRooms = rooms.filter((room) => Number(room.day) === day);
   return filteredRooms;
 };
 
