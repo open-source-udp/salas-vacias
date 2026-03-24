@@ -4,14 +4,14 @@ export type Room = {
   room: string;
 };
 type salaNodeResponse = {
-  code: String;
-  section: String;
-  course: String;
-  place: String;
-  start: String;
-  finish: String;
-  day: String;
-  teacher: String;
+  code: string;
+  section: number;
+  course: string;
+  place: string;
+  start: string;
+  finish: string;
+  day: number;
+  teacher: string;
 };
 export interface NodeResponse {
   node: salaNodeResponse;
